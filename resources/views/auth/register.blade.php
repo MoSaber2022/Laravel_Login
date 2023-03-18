@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container" id="fde">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -74,4 +74,7 @@
         </div>
     </div>
 </div>
+<img id="sor" src="/img/amico.png"  width="500" height="600">
+
+
 @endsection

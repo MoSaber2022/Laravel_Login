@@ -11,6 +11,8 @@
     <title>{{ config('app.name', 'SIM Registeration') }}</title>
 
     <!-- Fonts -->
+    <link rel="stylesheet" href ="{{asset('cssfile/register.css')}}" >
+
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
@@ -19,13 +21,17 @@
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+
+    <link href="/cssfile/main.css" rel="stylesheet">
 </head>
-<body>
-    <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
+<body class="dfd">
+    <div id="app" class="apps">
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm" id="sss">
+            <div class="container" id="ss">
+            <img id="sorR" src="/img/LL.png"  width="60" height="60">
+
                 <a class="navbar-brand" href="{{ url('/') }}">
-                   SIM Registeration
+                  <h1 class="sd"> SIM Registeration </h1>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -43,13 +49,13 @@
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                    <a id="ds" class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                                 </li>
                             @endif
 
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a id="ds" class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
                         @else
@@ -76,10 +82,14 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="py-4" id="ssss">
         
             @yield('content')
         </main>
     </div>
+    
+    
+
+  
 </body>
 </html>
